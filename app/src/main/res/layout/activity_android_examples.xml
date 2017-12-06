@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nyc.c4q.techup.mainui.AndroidExamplesActivity"
+    android:padding="24dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Example Applications"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:gravity="center"
+        android:textSize="32sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/button_fragments_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fragments"
+            android:onClick="onButtonClick"/>
+        <Button
+            android:id="@+id/button_recyclerview_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recycler View"
+            android:onClick="onButtonClick"/>
+        <Button
+            android:id="@+id/button_sharedpreferences_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SharedPreferences"
+            android:onClick="onButtonClick"/>
+        <Button
+            android:id="@+id/button_asyctasks_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AsyncTasks"
+            android:onClick="onButtonClick"/>
+        <Button
+            android:id="@+id/button_menu_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="menus"
+            android:onClick="onButtonClick"/>
+
+        <Button
+            android:id="@+id/button_intents_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="intents"
+            android:onClick="onButtonClick"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

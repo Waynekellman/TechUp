@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nyc.c4q.techup.appexamples.fragmentsexample.ExampleFirstFragment"
+    android:padding="32dp"
+    android:layout_gravity="center">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/example_first_fragment_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Text Here"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/first_fragment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ask me Anything"
+        android:layout_gravity="bottom"
+        />
+
+</FrameLayout>

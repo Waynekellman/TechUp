@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nyc.c4q.techup.appexamples.recyclerviewexample.ExampleDescriptionActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/book_itemview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/bookcover_imageview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/book_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="28sp"
+                android:gravity="bottom"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/book_author_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:id="@+id/publishing_year_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="publishing year"
+                android:textSize="14sp"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description_textview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="16dp"
+        android:hint="Description here"/>
+
+
+</LinearLayout>

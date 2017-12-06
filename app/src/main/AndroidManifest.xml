@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nyc.c4q.techup">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Material.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".androidresources.AndroidResourcesActivity" />
+        <activity android:name=".appexamples.ExamplesActivity" />
+        <activity android:name=".mainui.AndroidGuideActivity" />
+        <activity android:name=".appexamples.asyncexample.ExampleAsyncTasksActivity" />
+        <activity android:name=".appexamples.fragmentsexample.ExampleFragmentsMainActivity" />
+        <activity android:name=".appexamples.menusexample.ExampleMenuActivity" />
+        <activity android:name=".appexamples.recyclerviewexample.ExampleRecyclerViewActivity" />
+        <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesActivity" />
+        <activity android:name=".appexamples.intentsexample.ExampleIntentsActivity" />
+        <activity android:name=".mainui.AndroidTermsActivity" />
+        <activity android:name=".mainui.AndroidExamplesActivity" />
+        <activity android:name=".appexamples.menusexample.ExampleSecondMenuActivity" />
+        <activity android:name=".appexamples.intentsexample.ExampleSecondIntentActivity" />
+        <activity android:name=".appexamples.recyclerviewexample.ExampleDescriptionActivity" />
+        <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesSecondActivity" />
+        <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesRegisterActivity"></activity>
+    </application>
+
+</manifest>
