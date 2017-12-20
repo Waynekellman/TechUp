@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/cv"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="@dimen/cardview_compat_inset_shadow"
     >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:padding="16dp"
             >
 
@@ -27,7 +34,8 @@
                 android:id="@+id/article_title"
                 android:layout_toEndOf="@+id/article_photo"
                 android:layout_alignParentTop="true"
-                android:textSize="30sp"
+                android:textSize="16sp"
+                android:text="Title"
                 />
 
             <TextView
@@ -36,9 +44,11 @@
                 android:id="@+id/article_snippet"
                 android:layout_toEndOf="@+id/article_photo"
                 android:layout_below="@+id/article_title"
+                android:text="snippet"
                 />
 
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
+</LinearLayout>
 

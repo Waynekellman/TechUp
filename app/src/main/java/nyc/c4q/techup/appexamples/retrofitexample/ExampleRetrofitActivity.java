@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import nyc.c4q.techup.R;
@@ -25,8 +26,8 @@ public class ExampleRetrofitActivity extends AppCompatActivity {
     String baseURL = "https://api.nytimes.com/svc/";
     String endPoint = "search/v2/articlesearch.json";
     RecyclerView recyclerView;
-
-   List<NYTArticle> articleList = new ArrayList<>();
+    List<NYTArticle> articleList = new ArrayList<>();
+    NYTAdapter nytAdapter;
     private static final String TAG = "MainActivity";
 
     @Override
@@ -34,12 +35,41 @@ public class ExampleRetrofitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example_retrofit);
 
-        connectWithRetrofit();
         recyclerView = (RecyclerView) findViewById(R.id.nyt_recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        NYTAdapter nytAdapter = new NYTAdapter(articleList);
+        nytAdapter = new NYTAdapter(articleList);
         recyclerView.setAdapter(nytAdapter);
+
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseURL).addConverterFactory(GsonConverterFactory.create()).build();
+        ExampleRetrofitService service = retrofit.create(ExampleRetrofitService.class);
+        Call<NYTResponse> call = service.getResponse(apiKey);
+        call.enqueue(new retrofit2.Callback<NYTResponse>() {
+            @Override
+            public void onResponse(Call<NYTResponse> call, retrofit2.Response<NYTResponse> response) {
+
+                NYTDoc nytDoc = response.body().getResponse();
+                Log.d(TAG, "onResponse: " + nytDoc.getDocs().length);
+
+                for (int i = 0; i<nytDoc.getDocs().length ; i++){
+                    NYTArticle article = new NYTArticle();
+                    article.setSnippet(nytDoc.getDocs()[i].getSnippet());
+                    article.setHeadline(nytDoc.getDocs()[i].getHeadline());
+
+                    Log.e("Retrofit", article.getSnippet());
+                    articleList.add(article);
+                    nytAdapter.notifyDataSetChanged();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<NYTResponse> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
+
     }
 
     public void connectWithRetrofit(){
@@ -49,13 +79,19 @@ public class ExampleRetrofitActivity extends AppCompatActivity {
         call.enqueue(new retrofit2.Callback<NYTResponse>() {
             @Override
             public void onResponse(Call<NYTResponse> call, retrofit2.Response<NYTResponse> response) {
-                try {
+
                     NYTDoc nytDoc = response.body().getResponse();
                     Log.d(TAG, "onResponse: " + nytDoc.getDocs().length);
-                    articleList.addAll(Arrays.asList(nytDoc.getDocs()));
-                }catch (NullPointerException n){
-                    Log.d("Retrofit", "empty response");
-                }
+
+                    for (int i = 0; i<nytDoc.getDocs().length ; i++){
+                        NYTArticle article = new NYTArticle();
+                             article.setSnippet(nytDoc.getDocs()[i].getSnippet());
+                             article.setHeadline(nytDoc.getDocs()[i].getHeadline());
+
+                             Log.e("Retrofit", article.getSnippet());
+                        articleList.add(article);
+                    }
+
             }
 
             @Override

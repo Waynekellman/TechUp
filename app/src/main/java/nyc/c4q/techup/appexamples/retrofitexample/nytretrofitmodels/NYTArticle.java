@@ -7,10 +7,10 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class NYTArticle {
-    String snippet;
-    @SerializedName("headline")//this is what its called in the JSON, lets me change the name
-            NYTHeadline nytHeadline;
-    NYTMultimedia[] multimedia;
+    private String snippet;
+    //@SerializedName("headline")//this is what its called in the JSON, lets me change the name
+    private NYTHeadline headline;
+    private NYTMultimedia[] multimedia;
 
     public String getSnippet() {
         return snippet;
@@ -20,12 +20,12 @@ public class NYTArticle {
         this.snippet = snippet;
     }
 
-    public NYTHeadline getNytHeadline() {
-        return nytHeadline;
+    public NYTHeadline getHeadline() {
+        return headline;
     }
 
-    public void setNytHeadline(NYTHeadline nytHeadline) {
-        this.nytHeadline = nytHeadline;
+    public void setHeadline(NYTHeadline headline) {
+        this.headline = headline;
     }
 
     public NYTMultimedia[] getMultimedia() {

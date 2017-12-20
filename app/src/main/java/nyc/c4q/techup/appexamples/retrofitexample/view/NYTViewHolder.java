@@ -23,19 +23,17 @@ public class NYTViewHolder extends RecyclerView.ViewHolder {
     public NYTViewHolder(View itemView) {
         super(itemView);
 
-        cv = (CardView)itemView.findViewById(R.id.cv);
+        //cv = (CardView)itemView.findViewById(R.id.cv);
         articleTitle = (TextView)itemView.findViewById(R.id.article_title);
         articleSnippet = (TextView)itemView.findViewById(R.id.article_snippet);
         articlePhoto = (ImageView)itemView.findViewById(R.id.article_photo);
     }
 
     public void onBind(NYTArticle article){
-        articleTitle.setText(article.getNytHeadline().getPrint_headline());
+        articleTitle.setText(article.getHeadline().getPrint_headline());
         articleSnippet.setText(article.getSnippet());
-        Glide.with(itemView.getContext())
-                .load(article.getMultimedia()[0])
-                .override(150, 100)
-                .into(articlePhoto);
-
+        /*Glide.with(itemView.getContext())
+               .load("https://www.nytimes.com/" + article.getMultimedia()[0].getUrl())
+               .into(articlePhoto);*/
     }
 }

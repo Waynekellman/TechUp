@@ -61,7 +61,7 @@
             android:id="@+id/button_retrofit_intent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="intents"
+            android:text="Retrofit"
             android:onClick="onButtonClick"/>
 
 

@@ -53,6 +53,7 @@ public class AndroidExamplesActivity extends AppCompatActivity {
                 Intent retrofitIntent = new Intent(AndroidExamplesActivity.this, ExampleRetrofitActivity.class);
                 startActivity(retrofitIntent);
                 break;
+
         }
     }
 }

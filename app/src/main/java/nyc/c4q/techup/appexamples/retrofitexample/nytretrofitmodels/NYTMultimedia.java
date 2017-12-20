@@ -5,7 +5,7 @@ package nyc.c4q.techup.appexamples.retrofitexample.nytretrofitmodels;
  */
 
 public class NYTMultimedia {
-    String url;
+    private String url;
 
     public String getUrl() {
         return url;

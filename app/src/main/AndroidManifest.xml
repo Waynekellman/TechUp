@@ -36,7 +36,9 @@
         <activity android:name=".appexamples.recyclerviewexample.ExampleDescriptionActivity" />
         <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesSecondActivity" />
         <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesRegisterActivity" />
-        <activity android:name=".appexamples.retrofitexample.ExampleRetrofitActivity"></activity>
+        <activity android:name=".appexamples.retrofitexample.ExampleRetrofitActivity"/>
+
+
     </application>
 
 </manifest>
