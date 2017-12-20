@@ -10,6 +10,7 @@ import nyc.c4q.techup.R;
 import nyc.c4q.techup.appexamples.asyncexample.ExampleAsyncTasksActivity;
 import nyc.c4q.techup.appexamples.fragmentsexample.ExampleFragmentsMainActivity;
 import nyc.c4q.techup.appexamples.intentsexample.ExampleIntentsActivity;
+import nyc.c4q.techup.appexamples.jsonparsingexample.ExampleJsonParsingActivity;
 import nyc.c4q.techup.appexamples.menusexample.ExampleMenuActivity;
 import nyc.c4q.techup.appexamples.recyclerviewexample.ExampleRecyclerViewActivity;
 import nyc.c4q.techup.appexamples.retrofitexample.ExampleRetrofitActivity;
@@ -52,6 +53,10 @@ public class AndroidExamplesActivity extends AppCompatActivity {
             case R.id.button_retrofit_intent:
                 Intent retrofitIntent = new Intent(AndroidExamplesActivity.this, ExampleRetrofitActivity.class);
                 startActivity(retrofitIntent);
+                break;
+            case R.id.button_jsonparse_intent:
+                Intent jsonIntent = new Intent(AndroidExamplesActivity.this, ExampleJsonParsingActivity.class);
+                startActivity(jsonIntent);
                 break;
 
         }

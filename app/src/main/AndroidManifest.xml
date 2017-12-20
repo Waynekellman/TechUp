@@ -36,9 +36,10 @@
         <activity android:name=".appexamples.recyclerviewexample.ExampleDescriptionActivity" />
         <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesSecondActivity" />
         <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesRegisterActivity" />
-        <activity android:name=".appexamples.retrofitexample.ExampleRetrofitActivity"/>
-
-
+        <activity android:name=".appexamples.retrofitexample.ExampleRetrofitActivity" />
+        <activity android:name=".appexamples.jsonparsingexample.ExampleJsonParsingActivity" />
+        <activity android:name=".appexamples.jsonparsingexample.ExampleJsonParsingDetailActivity" />
+        <activity android:name=".appexamples.networkingexample.ExampleNetworkingActivity"></activity>
     </application>
 
 </manifest>
