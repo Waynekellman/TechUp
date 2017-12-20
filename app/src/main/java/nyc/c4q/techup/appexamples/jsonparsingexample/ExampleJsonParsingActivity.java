@@ -39,7 +39,7 @@ public class ExampleJsonParsingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example_json_parsing);
 
-        //****sorry, everything is in classes below, no time to set up properly!
+//****sorry, everything is in classes below, no time to set up properly!
 
         //This example parses a json string and logs it to the console (not in a recycler view!)
         //theres a method for setting the Json string, setting a json object to the string,
@@ -48,7 +48,18 @@ public class ExampleJsonParsingActivity extends AppCompatActivity {
 
         JsonParsingInnerArray jsonParsingInnerArray = new JsonParsingInnerArray();
         jsonParsingInnerArray.businessLogic();
-
+        //Output : Value {"affenpinscher":[],"african":[],"airedale":[],"akita":[],"appenzeller":[],"basenji":[],"beagle":[],"bluetick":[],
+        // "borzoi":[],"bouvier":[],"boxer":[],"brabancon":[],"briard":[],"bulldog":["boston","french"],"bullterrier":["staffordshire"],"cairn":[],
+        // "chihuahua":[],"chow":[],"clumber":[],"collie":["border"],"coonhound":[],"corgi":["cardigan"],"dachshund":[],"dane":["great"],"deerhound":["scottish"],
+        // "dhole":[],"dingo":[],"doberman":[],"elkhound":["norwegian"],"entlebucher":[],"eskimo":[],"germanshepherd":[],"greyhound":["italian"],"groenendael":[],
+        // "hound":["Ibizan","afghan","basset","blood","english","walker"],"husky":[],"keeshond":[],"kelpie":[],"komondor":[],"kuvasz":[],"labrador":[],"leonberg":[],
+        // "lhasa":[],"malamute":[],"malinois":[],"maltese":[],"mastiff":["bull","tibetan"],"mexicanhairless":[],"mountain":["bernese","swiss"],"newfoundland":[],"otterhound":[],
+        // "papillon":[],"pekinese":[],"pembroke":[],"pinscher":["miniature"],"pointer":["german"],"pomeranian":[],"poodle":["miniature","standard","toy"],"pug":[],"pyrenees":[],
+        // "redbone":[],"retriever":["chesapeake","curly","flatcoated","golden"],"ridgeback":["rhodesian"],"rottweiler":[],"saluki":[],"samoyed":[],"schipperke":[],"schnauzer":["giant","miniature"],
+        // "setter":["english","gordon","irish"],"sheepdog":["english","shetland"],"shiba":[],"shihtzu":[],"spaniel":["blenheim","brittany","cocker","irish","japanese","sussex","welsh"],
+        // "springer":["english"],"stbernard":[],"terrier":["american","australian","bedlington","border","dandie","fox","irish","kerryblue","lakeland","norfolk","norwich","patterdale","scottish","sealyham","silky","tibetan","toy","westhighland","wheaten","yorkshire"],
+        // "vizsla":[],"weimaraner":[],"whippet":[],"wolfhound":["irish"]}
+//******
 
         //Gson Parsing shows how to read Json input from a file which is in the raw resources directory,
         //Terms data is a class that extends array list, it has a method to parse data from file and add to the list. this list
@@ -124,7 +135,7 @@ public class ExampleJsonParsingActivity extends AppCompatActivity {
         public void logKeys(List<String> keyList, JSONArray jsonArray) {
             //this outer loop gets the keyname for the arrays inside the outer aray and logs them
             for (int i = 0; i < keyList.size(); i++) {
-                Log.d("Dog Breeds: ", keyList.get(i));
+                Log.e("Dog Breeds: ", keyList.get(i));
                 String key = keyList.get(i);//then take each key and parse their inner arrays with another (inner for loop)
 
                 try {
@@ -140,7 +151,7 @@ public class ExampleJsonParsingActivity extends AppCompatActivity {
                     //if there are objects in the array, if it it not empty, this logs them.
                     if (!innerArrayStrings.isEmpty()) {
                         for (String s : innerArrayStrings) {
-                            Log.d(TAG, "Dog Breed Types:" + s);
+                            Log.e(TAG, "Dog Breed Types:" + s);
                         }
                     }
                 } catch (JSONException e) {
