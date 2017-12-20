@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nyc.c4q.techup">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".androidresources.AndroidResourcesActivity" />
         <activity android:name=".appexamples.ExamplesActivity" />
         <activity android:name=".mainui.AndroidGuideActivity" />
         <activity android:name=".appexamples.asyncexample.ExampleAsyncTasksActivity" />
@@ -33,7 +35,10 @@
         <activity android:name=".appexamples.intentsexample.ExampleSecondIntentActivity" />
         <activity android:name=".appexamples.recyclerviewexample.ExampleDescriptionActivity" />
         <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesSecondActivity" />
-        <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesRegisterActivity"></activity>
+        <activity android:name=".appexamples.sharedpreferencesexample.ExampleSharedPreferencesRegisterActivity" />
+        <activity android:name=".appexamples.retrofitexample.ExampleRetrofitActivity"/>
+
+
     </application>
 
 </manifest>

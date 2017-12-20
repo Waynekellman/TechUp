@@ -12,6 +12,7 @@ import nyc.c4q.techup.appexamples.fragmentsexample.ExampleFragmentsMainActivity;
 import nyc.c4q.techup.appexamples.intentsexample.ExampleIntentsActivity;
 import nyc.c4q.techup.appexamples.menusexample.ExampleMenuActivity;
 import nyc.c4q.techup.appexamples.recyclerviewexample.ExampleRecyclerViewActivity;
+import nyc.c4q.techup.appexamples.retrofitexample.ExampleRetrofitActivity;
 import nyc.c4q.techup.appexamples.sharedpreferencesexample.ExampleSharedPreferencesActivity;
 
 public class AndroidExamplesActivity extends AppCompatActivity {
@@ -48,6 +49,11 @@ public class AndroidExamplesActivity extends AppCompatActivity {
                 Intent sharedPreferencesIntent = new Intent(AndroidExamplesActivity.this, ExampleSharedPreferencesActivity.class);
                 startActivity(sharedPreferencesIntent);
                 break;
+            case R.id.button_retrofit_intent:
+                Intent retrofitIntent = new Intent(AndroidExamplesActivity.this, ExampleRetrofitActivity.class);
+                startActivity(retrofitIntent);
+                break;
+
         }
     }
 }
