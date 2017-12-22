@@ -2,6 +2,7 @@ package nyc.c4q.techup.appexamples.retrofitexample.view;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,8 +33,11 @@ public class NYTViewHolder extends RecyclerView.ViewHolder {
     public void onBind(NYTArticle article){
         articleTitle.setText(article.getHeadline().getPrint_headline());
         articleSnippet.setText(article.getSnippet());
-        /*Glide.with(itemView.getContext())
-               .load("https://www.nytimes.com/" + article.getMultimedia()[0].getUrl())
-               .into(articlePhoto);*/
+        if ((article.getMultimedia().length != 0)) {
+            Log.e("NYTViewHolder", "url: " + article.getMultimedia()[0].getUrl());
+            Glide.with(itemView.getContext())
+                    .load("https://www.nytimes.com/" + article.getMultimedia()[0].getUrl())
+                    .into(articlePhoto);
+        }
     }
 }
