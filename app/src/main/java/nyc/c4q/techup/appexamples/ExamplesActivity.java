@@ -11,5 +11,6 @@ public class ExamplesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_examples);
+        //TODO: make examples more clear and better looking. At comments to the code.
     }
 }

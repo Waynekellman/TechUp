@@ -22,6 +22,7 @@ public class AndroidExamplesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_examples);
+        //TODO: Recycler View!!! too many buttons, this isn't pretty!
     }
 
     public void onButtonClick(View view){
