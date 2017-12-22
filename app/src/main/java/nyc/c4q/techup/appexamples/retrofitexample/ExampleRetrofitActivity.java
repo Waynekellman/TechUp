@@ -55,8 +55,13 @@ public class ExampleRetrofitActivity extends AppCompatActivity {
                     NYTArticle article = new NYTArticle();
                     article.setSnippet(nytDoc.getDocs()[i].getSnippet());
                     article.setHeadline(nytDoc.getDocs()[i].getHeadline());
+                    article.setMultimedia(nytDoc.getDocs()[i].getMultimedia());
 
-                    Log.e("Retrofit", article.getSnippet());
+                    Log.e("Retrofit","Snippet: " + article.getSnippet());
+                    if(article.getMultimedia().length != 0){
+                        Log.e("Retrofit", article.getMultimedia()[0].getUrl());
+                    }
+                    Log.e("Retrofit","Headline: " + article.getHeadline().getPrint_headline());
                     articleList.add(article);
                     nytAdapter.notifyDataSetChanged();
                 }
