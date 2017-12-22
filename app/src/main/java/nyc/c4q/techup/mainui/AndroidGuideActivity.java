@@ -11,5 +11,7 @@ public class AndroidGuideActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_guides);
+        //TODO: add step by step development guides.
+        //TODO: figure out how to add links that refer to examples and terms
     }
 }

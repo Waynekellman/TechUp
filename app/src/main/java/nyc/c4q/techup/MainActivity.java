@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //TODO: figure out how to display these activities (fragments? view pager? what to do?!)
+        //TODO: instead of directly linking to these, have an intro page with an overview of what the app does
+        //TODO: add menu for settings and search functionality
+        //TODO: add SharedPreferences to save lists of guides and terms
     }
 
     public void onButtonclick(View view){
