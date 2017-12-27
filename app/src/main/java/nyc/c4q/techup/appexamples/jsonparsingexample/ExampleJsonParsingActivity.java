@@ -173,7 +173,6 @@ public class ExampleJsonParsingActivity extends AppCompatActivity {
             private TermData termData;
 
             private TermData(){
-
             }
             //method to fill list with json object from file using input stream and gson.
             private TermData setTermsList() {

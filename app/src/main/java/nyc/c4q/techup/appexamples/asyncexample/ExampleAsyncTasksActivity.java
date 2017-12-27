@@ -26,7 +26,7 @@ public class ExampleAsyncTasksActivity extends AppCompatActivity {
         primesdisplay = (TextView) findViewById(R.id.text_view);
     }
 
-    public void onButtonClick(View v) {
+    public void exampleAsyncClick(View v) {
         userEntry = userEditText.getText().toString();
         try {
             number = Integer.parseInt(userEntry);

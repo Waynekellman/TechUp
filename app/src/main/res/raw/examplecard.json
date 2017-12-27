@@ -1,0 +1,42 @@
+[
+        {
+            "name": "asyncTasks",
+            "title": "Async Tasks",
+            "description": "to do..."
+        },
+        {
+            "name": "fragments",
+            "title": "Fragments",
+            "description": "to do..."
+        },
+        {
+            "name": "intents",
+            "title": "Intents",
+            "description": "to do..."
+        },
+        {
+            "name": "menus",
+            "title": "Menus",
+            "description": "to do..."
+        },
+        {
+            "name": "recyclerView",
+            "title": "RecyclerView",
+            "description": "to do..."
+        },
+        {
+            "name": "sharedpreferences",
+            "title": "Shared Preferences",
+            "description": "to do..."
+        },
+        {
+            "name": "retrofit",
+            "title": "Retrofit",
+            "description": "to do..."
+        },
+        {
+            "name": "jsonParsing",
+            "title": "JSON Parsing",
+            "description": "to do..."
+        }
+]
